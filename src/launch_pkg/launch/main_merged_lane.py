@@ -4,7 +4,7 @@ from launch_ros.actions import Node
 def generate_launch_description():
     
     # Update this list to match your camera numbers
-    cam_numbers = [0, 2, 6] 
+    cam_numbers = [0, 2] 
     
     nodes = []
     
@@ -40,9 +40,7 @@ def generate_launch_description():
                     # Corrected parameter name from 'sub_topic' to 'sub_detection_topic'
                     {'sub_detection_topic': f'detections_{i}'},
                     # Pass the unique topic name for the ROI image
-                    {'roi_pub_topic': f'roi_image_{i}'},
-                    # Add the camera number as a parameter
-                    {'cam_num': i}
+                    {'roi_pub_topic': f'roi_image_{i}'}
                 ]
             ),
             Node(
@@ -58,20 +56,14 @@ def generate_launch_description():
             )
         ])
         
-    # Add other nodes that should only be launched once
-    # nodes.extend([
-    #     Node(
-    #         package='decision_making_pkg',
-    #         executable='path_planner_node',
-    #         name='path_planner_node',
-    #         output='screen'
-    #     ),
-    #     Node(
-    #         package='decision_making_pkg',
-    #         executable='motion_planner_node',
-    #         name='motion_planner_node',
-    #         output='screen'
-    #     ),
-    # ])
+    # Add the new ROI merger node to the launch description
+    nodes.append(
+        Node(
+            package='camera_perception_pkg',
+            executable='roi_merger_node',
+            name='roi_merger_node',
+            output='screen'
+        )
+    )
 
     return LaunchDescription(nodes)
