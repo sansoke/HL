@@ -17,6 +17,12 @@ def generate_launch_description():
         ),
         Node(
             package='camera_perception_pkg',
+            executable='yolov8_traffic_light_node',
+            name='yolov8_traffic_light_node',
+            output='screen'
+        ),
+        Node(
+            package='camera_perception_pkg',
             executable='lane_info_extractor_node',
             name='lane_info_extractor_node',
             output='screen'
@@ -68,7 +74,13 @@ def generate_launch_description():
             executable='path_visualizer_node',
             name='path_visualizer_node',
             output='screen'
-        ),        
+        ),
+        Node(
+            package='debug_pkg',
+            executable='traffic_light_visualizer_node',
+            name='traffic_light_visualizer_node',
+            output='screen'
+        ),
         # Node(
         #     package='serial_communication_pkg',
         #     executable='serial_sender_node',
