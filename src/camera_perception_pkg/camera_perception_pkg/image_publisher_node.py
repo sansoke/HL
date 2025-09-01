@@ -24,10 +24,10 @@ DATA_SOURCE = 'video'
 CAM_NUM = 0
 
 # 이미지 데이터가 들어있는 디렉토리의 경로를 입력
-IMAGE_DIRECTORY_PATH = 'src/camera_perception_pkg/camera_perception_pkg/lib/Collected_Datasets/sample_dataset'
+IMAGE_DIRECTORY_PATH = 'src/camera_perception_pkg/camera_perception_pkg/lib/Collected_Datasets/data1'
 
 # 비디오 데이터 파일의 경로를 입력
-VIDEO_FILE_PATH = 'src/camera_perception_pkg/camera_perception_pkg/lib/Collected_Datasets/driving_simulation.mp4'
+VIDEO_FILE_PATH = 'src/camera_perception_pkg/camera_perception_pkg/lib/Collected_Datasets/traffic_light_video/t1.mp4'
 
 # 화면에 publish하는 이미지를 띄울것인지 여부: True, 또는 False 중 택1하여 입력
 SHOW_IMAGE = True
