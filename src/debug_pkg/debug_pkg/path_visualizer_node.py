@@ -6,6 +6,8 @@ from interfaces_pkg.msg import PathPlanningResult
 import cv2
 import numpy as np
 from cv_bridge import CvBridge
+from std_msgs.msg import Float32
+
 
 #---------------Variable Setting---------------
 SUB_ROI_IMAGE_TOPIC = "roi_image"        # ROI 이미지 토픽
@@ -21,6 +23,8 @@ class PathVisualizerNode(Node):
         self.sub_roi_image_topic = self.declare_parameter('sub_roi_image_topic', SUB_ROI_IMAGE_TOPIC).value
         self.sub_spline_path_topic = self.declare_parameter('sub_spline_path_topic', SUB_SPLINE_PATH_TOPIC).value
         self.pub_topic = self.declare_parameter('pub_topic', PUB_TOPIC_NAME).value
+        self.steer_sub = self.create_subscription(Float32, 'steering_angle', self.steer_callback, self.qos_profile)
+
 
         # QoS 설정
         self.qos_profile = QoSProfile(

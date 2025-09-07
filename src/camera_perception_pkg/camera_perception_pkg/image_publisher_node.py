@@ -18,7 +18,7 @@ import os
 PUB_TOPIC_NAME = 'image_raw'
 
 # 데이터 입력 소스: 'camera', 'image', 또는 'video' 중 택1하여 입력
-DATA_SOURCE = 'camera'
+DATA_SOURCE = 'video'
 
 # 카메라(웹캠) 장치 번호 (ls /dev/video* 명령을 터미널 창에 입력하여 확인)
 CAM_NUM = 4
@@ -27,7 +27,7 @@ CAM_NUM = 4
 IMAGE_DIRECTORY_PATH = 'src/camera_perception_pkg/camera_perception_pkg/lib/Collected_Datasets/data1'
 
 # 비디오 데이터 파일의 경로를 입력
-VIDEO_FILE_PATH = 'src/camera_perception_pkg/camera_perception_pkg/lib/Collected_Datasets/traffic_light_video/t5.mp4'
+VIDEO_FILE_PATH = 'src/camera_perception_pkg/camera_perception_pkg/lib/Collected_Datasets/lane_video.mp4'
 
 # 화면에 publish하는 이미지를 띄울것인지 여부: True, 또는 False 중 택1하여 입력
 SHOW_IMAGE = True
