@@ -1,4 +1,0 @@
-/home/jeanho/ros2_ws/src/build/ublox_ubx_interfaces/rosidl_adapter/ublox_ubx_interfaces:srv/HotStart.idl
-/home/jeanho/ros2_ws/src/build/ublox_ubx_interfaces/rosidl_adapter/ublox_ubx_interfaces:srv/WarmStart.idl
-/home/jeanho/ros2_ws/src/build/ublox_ubx_interfaces/rosidl_adapter/ublox_ubx_interfaces:srv/ColdStart.idl
-/home/jeanho/ros2_ws/src/build/ublox_ubx_interfaces/rosidl_adapter/ublox_ubx_interfaces:srv/ResetODO.idl

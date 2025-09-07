@@ -1,6 +1,0 @@
-setup.py
-ublox_ubx_msgs/__init__.py
-ublox_ubx_msgs.egg-info/PKG-INFO
-ublox_ubx_msgs.egg-info/SOURCES.txt
-ublox_ubx_msgs.egg-info/dependency_links.txt
-ublox_ubx_msgs.egg-info/top_level.txt
