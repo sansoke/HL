@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-042399ec4b2d0af793f2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "ntrip_client_node",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ntrip_client_components::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ntrip_client_components-36efbe83040252e5ff08.json",
+					"name" : "ntrip_client_components",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ntrip_client_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ntrip_client_node-fc5e26c982fd139306a5.json",
+					"name" : "ntrip_client_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ntrip_client_node_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ntrip_client_node_uninstall-b027a903d81d200e1fa4.json",
+					"name" : "ntrip_client_node_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-44dc3dd3c390adc369b9.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/jeanho/ros2_ws/src/build/ntrip_client_node",
+		"source" : "/home/jeanho/ros2_ws/src/ublox_dgnss/ntrip_client_node"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

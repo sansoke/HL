@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-0090a160a62fed8815ed.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "ublox_nav_sat_fix_hp_node",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ublox_nav_sat_fix_hp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ublox_nav_sat_fix_hp-f70835d533f5395937f1.json",
+					"name" : "ublox_nav_sat_fix_hp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ublox_nav_sat_fix_hp_components::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ublox_nav_sat_fix_hp_components-725261fb33f4b5d735ec.json",
+					"name" : "ublox_nav_sat_fix_hp_components",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ublox_nav_sat_fix_hp_node_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ublox_nav_sat_fix_hp_node_uninstall-197197df360c300a23c2.json",
+					"name" : "ublox_nav_sat_fix_hp_node_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-28af4924e00673a00a6a.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/jeanho/ros2_ws/src/build/ublox_nav_sat_fix_hp_node",
+		"source" : "/home/jeanho/ros2_ws/src/ublox_dgnss/ublox_nav_sat_fix_hp_node"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

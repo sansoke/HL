@@ -1,0 +1,53 @@
+[1.228s] Invoking command in '/home/jeanho/ros2_ws/src/lidar_perception_pkg': PYTHONPATH=/home/jeanho/ros2_ws/src/build/lidar_perception_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jeanho/ros2_ws/src/install/lidar_perception_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/lidar_perception_pkg build --build-base /home/jeanho/ros2_ws/src/build/lidar_perception_pkg/build install --record /home/jeanho/ros2_ws/src/build/lidar_perception_pkg/install.log --single-version-externally-managed install_data
+[1.395s] running egg_info
+[1.395s] creating ../build/lidar_perception_pkg/lidar_perception_pkg.egg-info
+[1.395s] writing ../build/lidar_perception_pkg/lidar_perception_pkg.egg-info/PKG-INFO
+[1.398s] writing dependency_links to ../build/lidar_perception_pkg/lidar_perception_pkg.egg-info/dependency_links.txt
+[1.398s] writing entry points to ../build/lidar_perception_pkg/lidar_perception_pkg.egg-info/entry_points.txt
+[1.399s] writing requirements to ../build/lidar_perception_pkg/lidar_perception_pkg.egg-info/requires.txt
+[1.400s] writing top-level names to ../build/lidar_perception_pkg/lidar_perception_pkg.egg-info/top_level.txt
+[1.400s] writing manifest file '../build/lidar_perception_pkg/lidar_perception_pkg.egg-info/SOURCES.txt'
+[1.406s] reading manifest file '../build/lidar_perception_pkg/lidar_perception_pkg.egg-info/SOURCES.txt'
+[1.406s] writing manifest file '../build/lidar_perception_pkg/lidar_perception_pkg.egg-info/SOURCES.txt'
+[1.407s] running build
+[1.407s] running build_py
+[1.407s] creating /home/jeanho/ros2_ws/src/build/lidar_perception_pkg/build
+[1.409s] creating /home/jeanho/ros2_ws/src/build/lidar_perception_pkg/build/lib
+[1.410s] creating /home/jeanho/ros2_ws/src/build/lidar_perception_pkg/build/lib/lidar_perception_pkg
+[1.410s] copying lidar_perception_pkg/lidar_publisher_node.py -> /home/jeanho/ros2_ws/src/build/lidar_perception_pkg/build/lib/lidar_perception_pkg
+[1.410s] copying lidar_perception_pkg/lidar_obstacle_detector_node.py -> /home/jeanho/ros2_ws/src/build/lidar_perception_pkg/build/lib/lidar_perception_pkg
+[1.411s] copying lidar_perception_pkg/__init__.py -> /home/jeanho/ros2_ws/src/build/lidar_perception_pkg/build/lib/lidar_perception_pkg
+[1.411s] copying lidar_perception_pkg/lidar_processor_node.py -> /home/jeanho/ros2_ws/src/build/lidar_perception_pkg/build/lib/lidar_perception_pkg
+[1.413s] creating /home/jeanho/ros2_ws/src/build/lidar_perception_pkg/build/lib/lidar_perception_pkg/lib
+[1.413s] copying lidar_perception_pkg/lib/__init__.py -> /home/jeanho/ros2_ws/src/build/lidar_perception_pkg/build/lib/lidar_perception_pkg/lib
+[1.413s] copying lidar_perception_pkg/lib/lidar_perception_func_lib.py -> /home/jeanho/ros2_ws/src/build/lidar_perception_pkg/build/lib/lidar_perception_pkg/lib
+[1.414s] running install
+[1.415s] running install_lib
+[1.415s] creating /home/jeanho/ros2_ws/src/install/lidar_perception_pkg/lib/python3.10/site-packages/lidar_perception_pkg
+[1.415s] creating /home/jeanho/ros2_ws/src/install/lidar_perception_pkg/lib/python3.10/site-packages/lidar_perception_pkg/lib
+[1.416s] copying /home/jeanho/ros2_ws/src/build/lidar_perception_pkg/build/lib/lidar_perception_pkg/lib/__init__.py -> /home/jeanho/ros2_ws/src/install/lidar_perception_pkg/lib/python3.10/site-packages/lidar_perception_pkg/lib
+[1.416s] copying /home/jeanho/ros2_ws/src/build/lidar_perception_pkg/build/lib/lidar_perception_pkg/lib/lidar_perception_func_lib.py -> /home/jeanho/ros2_ws/src/install/lidar_perception_pkg/lib/python3.10/site-packages/lidar_perception_pkg/lib
+[1.417s] copying /home/jeanho/ros2_ws/src/build/lidar_perception_pkg/build/lib/lidar_perception_pkg/lidar_publisher_node.py -> /home/jeanho/ros2_ws/src/install/lidar_perception_pkg/lib/python3.10/site-packages/lidar_perception_pkg
+[1.417s] copying /home/jeanho/ros2_ws/src/build/lidar_perception_pkg/build/lib/lidar_perception_pkg/lidar_obstacle_detector_node.py -> /home/jeanho/ros2_ws/src/install/lidar_perception_pkg/lib/python3.10/site-packages/lidar_perception_pkg
+[1.417s] copying /home/jeanho/ros2_ws/src/build/lidar_perception_pkg/build/lib/lidar_perception_pkg/__init__.py -> /home/jeanho/ros2_ws/src/install/lidar_perception_pkg/lib/python3.10/site-packages/lidar_perception_pkg
+[1.417s] copying /home/jeanho/ros2_ws/src/build/lidar_perception_pkg/build/lib/lidar_perception_pkg/lidar_processor_node.py -> /home/jeanho/ros2_ws/src/install/lidar_perception_pkg/lib/python3.10/site-packages/lidar_perception_pkg
+[1.417s] byte-compiling /home/jeanho/ros2_ws/src/install/lidar_perception_pkg/lib/python3.10/site-packages/lidar_perception_pkg/lib/__init__.py to __init__.cpython-310.pyc
+[1.418s] byte-compiling /home/jeanho/ros2_ws/src/install/lidar_perception_pkg/lib/python3.10/site-packages/lidar_perception_pkg/lib/lidar_perception_func_lib.py to lidar_perception_func_lib.cpython-310.pyc
+[1.419s] byte-compiling /home/jeanho/ros2_ws/src/install/lidar_perception_pkg/lib/python3.10/site-packages/lidar_perception_pkg/lidar_publisher_node.py to lidar_publisher_node.cpython-310.pyc
+[1.419s] byte-compiling /home/jeanho/ros2_ws/src/install/lidar_perception_pkg/lib/python3.10/site-packages/lidar_perception_pkg/lidar_obstacle_detector_node.py to lidar_obstacle_detector_node.cpython-310.pyc
+[1.420s] byte-compiling /home/jeanho/ros2_ws/src/install/lidar_perception_pkg/lib/python3.10/site-packages/lidar_perception_pkg/__init__.py to __init__.cpython-310.pyc
+[1.420s] byte-compiling /home/jeanho/ros2_ws/src/install/lidar_perception_pkg/lib/python3.10/site-packages/lidar_perception_pkg/lidar_processor_node.py to lidar_processor_node.cpython-310.pyc
+[1.420s] running install_data
+[1.420s] creating /home/jeanho/ros2_ws/src/install/lidar_perception_pkg/share/ament_index
+[1.420s] creating /home/jeanho/ros2_ws/src/install/lidar_perception_pkg/share/ament_index/resource_index
+[1.421s] creating /home/jeanho/ros2_ws/src/install/lidar_perception_pkg/share/ament_index/resource_index/packages
+[1.421s] copying resource/lidar_perception_pkg -> /home/jeanho/ros2_ws/src/install/lidar_perception_pkg/share/ament_index/resource_index/packages
+[1.421s] copying package.xml -> /home/jeanho/ros2_ws/src/install/lidar_perception_pkg/share/lidar_perception_pkg
+[1.422s] running install_egg_info
+[1.423s] Copying ../build/lidar_perception_pkg/lidar_perception_pkg.egg-info to /home/jeanho/ros2_ws/src/install/lidar_perception_pkg/lib/python3.10/site-packages/lidar_perception_pkg-0.0.0-py3.10.egg-info
+[1.423s] running install_scripts
+[1.441s] Installing lidar_obstacle_detector_node script to /home/jeanho/ros2_ws/src/install/lidar_perception_pkg/lib/lidar_perception_pkg
+[1.441s] Installing lidar_processor_node script to /home/jeanho/ros2_ws/src/install/lidar_perception_pkg/lib/lidar_perception_pkg
+[1.441s] Installing lidar_publisher_node script to /home/jeanho/ros2_ws/src/install/lidar_perception_pkg/lib/lidar_perception_pkg
+[1.442s] writing list of installed files to '/home/jeanho/ros2_ws/src/build/lidar_perception_pkg/install.log'
+[1.493s] Invoked command in '/home/jeanho/ros2_ws/src/lidar_perception_pkg' returned '0': PYTHONPATH=/home/jeanho/ros2_ws/src/build/lidar_perception_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jeanho/ros2_ws/src/install/lidar_perception_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/lidar_perception_pkg build --build-base /home/jeanho/ros2_ws/src/build/lidar_perception_pkg/build install --record /home/jeanho/ros2_ws/src/build/lidar_perception_pkg/install.log --single-version-externally-managed install_data

@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-521f7ef28a08039b2cf9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "ublox_dgnss_node",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ublox_dgnss_components::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ublox_dgnss_components-4d6bdc05710307c44415.json",
+					"name" : "ublox_dgnss_components",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ublox_dgnss_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ublox_dgnss_node-21bc65a4ac07fe1ad603.json",
+					"name" : "ublox_dgnss_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ublox_dgnss_node_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ublox_dgnss_node_uninstall-727e6bbfaef30f0654b7.json",
+					"name" : "ublox_dgnss_node_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-7c41960a03b9f2ac5a16.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/jeanho/ros2_ws/src/build/ublox_dgnss_node",
+		"source" : "/home/jeanho/ros2_ws/src/ublox_dgnss/ublox_dgnss_node"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
