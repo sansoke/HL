@@ -57,12 +57,12 @@ def generate_launch_description():
         #     name='lidar_obstacle_detector_node',
         #     output='screen'
         # ),
-        # Node(
-        #     package='decision_making_pkg',
-        #     executable='motion_planner_node',
-        #     name='motion_planner_node',
-        #     output='screen'
-        # ),
+        Node(
+            package='decision_making_pkg',
+            executable='motion_planner_node',
+            name='motion_planner_node',
+            output='screen'
+        ),
         Node(
             package='decision_making_pkg',
             executable='path_planner_node',
@@ -81,10 +81,10 @@ def generate_launch_description():
             name='traffic_light_visualizer_node',
             output='screen'
         ),
-        # Node(
-        #     package='serial_communication_pkg',
-        #     executable='serial_sender_node',
-        #     name='serial_sender_node',
-        #     output='screen'
-        # ),
+        Node(
+            package='serial_communication_pkg',
+            executable='serial_sender_node',
+            name='serial_sender_node',
+            output='screen'
+        ),
     ])

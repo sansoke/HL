@@ -105,16 +105,16 @@ class MotionPlanningNode(Node):
             else:
                 target_slope = DMFL.calculate_slope_between_points(self.path_data[-10], self.path_data[-1])
                 
-                if target_slope > 2:
+                if target_slope > 0:
                     self.steering_command =  7 # 예시 조향 값 (7이 최대 조향) 
-                elif target_slope < -2:
+                elif target_slope < 0:
                     self.steering_command =  -7
                 else:
                     self.steering_command = 0
 
 
-            self.left_speed_command = 100  # 예시 속도 값 (255가 최대 속도)
-            self.right_speed_command = 100  # 예시 속도 값 (255가 최대 속도)
+            self.left_speed_command = 20  # 예시 속도 값 (255가 최대 속도)
+            self.right_speed_command = 20  # 예시 속도 값 (255가 최대 속도)
 
 
 
