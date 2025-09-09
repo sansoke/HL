@@ -26,6 +26,7 @@ setup(
             'path_planner_node = decision_making_pkg.path_planner_node:main',
             'motion_planner_node = decision_making_pkg.motion_planner_node:main',
             'waypoint_follower_node = decision_making_pkg.waypoint_follower_node:main', # Add this line
+            'path_planner_robust_node = decision_making_pkg.path_planner_robust_node:main',
         ],
     },
 )
