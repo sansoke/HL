@@ -4,6 +4,7 @@ from rclpy.qos import QoSProfile
 from rclpy.qos import QoSHistoryPolicy
 from rclpy.qos import QoSDurabilityPolicy
 from rclpy.qos import QoSReliabilityPolicy
+import numpy as np
 
 from std_msgs.msg import String, Bool
 from interfaces_pkg.msg import PathPlanningResult, DetectionArray, MotionCommand
@@ -34,6 +35,11 @@ class MotionPlanningNode(Node):
         
         self.timer_period = self.declare_parameter('timer', TIMER).value
 
+        # Control parameters
+        self.smoothing_factor = self.declare_parameter('smoothing_factor', 0.15).value # Alpha for the low-pass filter
+        self.steering_gain = self.declare_parameter('steering_gain', 0.8).value # P-gain for steering control
+        self.steering_deadzone = self.declare_parameter('steering_deadzone', 2.0).value # Slope values below this are treated as 0
+
         # QoS 설정
         self.qos_profile = QoSProfile(
             reliability=QoSReliabilityPolicy.RELIABLE,
@@ -48,7 +54,7 @@ class MotionPlanningNode(Node):
         self.traffic_light_data = None
         self.lidar_data = None
 
-        self.steering_command = 0
+        self.steering_command = 0.0  # Use float for smoothing calculations
         self.left_speed_command = 0
         self.right_speed_command = 0
         
@@ -78,10 +84,11 @@ class MotionPlanningNode(Node):
         self.lidar_data = msg
         
     def timer_callback(self):
-
+        target_steering = 0.0
+        
         if self.lidar_data is not None and self.lidar_data.data is True:
             # 라이다가 장애물을 감지한 경우
-            self.steering_command = 0 
+            target_steering = 0.0
             self.left_speed_command = 0 
             self.right_speed_command = 0 
 
@@ -96,35 +103,40 @@ class MotionPlanningNode(Node):
 
                     if y_max < 150:
                         # 신호등 위치에 따른 정지명령 결정
-                        self.steering_command = 0 
+                        target_steering = 0.0 
                         self.left_speed_command = 0 
                         self.right_speed_command = 0
         else:
             if self.path_data is None:
-                self.steering_command = 0
+                target_steering = 0.0
             else:
                 target_slope = DMFL.calculate_slope_between_points(self.path_data[-10], self.path_data[-1])
                 
-                if target_slope > 0:
-                    self.steering_command =  7 # 예시 조향 값 (7이 최대 조향) 
-                elif target_slope < 0:
-                    self.steering_command =  -7
-                else:
-                    self.steering_command = 0
+                # Apply deadzone to ignore small slopes
+                if abs(target_slope) < self.steering_deadzone:
+                    target_slope = 0.0
 
+                # Proportional control for steering
+                target_steering = self.steering_gain * target_slope
+                
+                # Clamp the steering command to the max/min values
+                max_steer = 7.0
+                target_steering = np.clip(target_steering, -max_steer, max_steer)
 
             self.left_speed_command = 50  # 예시 속도 값 (255가 최대 속도)
             self.right_speed_command = 50  # 예시 속도 값 (255가 최대 속도)
 
+        # Smooth the steering command using a low-pass filter
+        self.steering_command = (self.smoothing_factor * target_steering) + \
+                                ((1.0 - self.smoothing_factor) * self.steering_command)
 
-
-        self.get_logger().info(f"steering: {self.steering_command}, " 
+        self.get_logger().info(f"steering: {self.steering_command:.2f}, " 
                                f"left_speed: {self.left_speed_command}, " 
                                f"right_speed: {self.right_speed_command}")
 
         # 모션 명령 메시지 생성 및 퍼블리시
         motion_command_msg = MotionCommand()
-        motion_command_msg.steering = self.steering_command
+        motion_command_msg.steering = int(self.steering_command)
         motion_command_msg.left_speed = self.left_speed_command
         motion_command_msg.right_speed = self.right_speed_command
         self.publisher.publish(motion_command_msg)

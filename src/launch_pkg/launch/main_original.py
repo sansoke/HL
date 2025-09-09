@@ -75,6 +75,12 @@ def generate_launch_description():
             name='path_visualizer_node',
             output='screen'
         ),
+            Node(
+            package='debug_pkg',
+            executable='steering_visualizer_node',
+            name='steering_visualizer_node',
+            output='screen'
+        ),
         Node(
             package='debug_pkg',
             executable='traffic_light_visualizer_node',

@@ -70,6 +70,13 @@ def generate_launch_description():
             name='path_planner_node',
             output='screen'
         ),
+        # Node(
+        #     package='decision_making_pkg',
+        #     executable='waypoint_follower_node',
+        #     name='waypoint_follower_node',
+        #     output='screen',
+        #     parameters=[{'waypoints_file': 'src/decision_making_pkg/waypoints.csv'}]
+        # ),  
         Node(
             package='debug_pkg',
             executable='path_visualizer_node',
@@ -80,6 +87,12 @@ def generate_launch_description():
             package='debug_pkg',
             executable='traffic_light_visualizer_node',
             name='traffic_light_visualizer_node',
+            output='screen'
+        ),
+            Node(
+            package='debug_pkg',
+            executable='steering_visualizer_node',
+            name='steering_visualizer_node',
             output='screen'
         ),
         Node(
