@@ -1,5 +1,5 @@
-import os # ADD THIS
-from glob import glob # ADD THIS
+import os
+from glob import glob
 from setuptools import find_packages, setup
 
 package_name = 'my_gps_pkg'
@@ -12,13 +12,14 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        # ADD THIS LINE AND THE COMMA ABOVE
+        # This is the crucial line that was missing.
+        # It tells colcon to install your launch files.
         (os.path.join('share', package_name, 'launch'), glob(os.path.join('launch', '*.launch.py'))),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='jeanho',
-    maintainer_email='jeanho20@gmail.com',
+    maintainer_email='jeanho@todo.todo',
     description='TODO: Package description',
     license='TODO: License declaration',
     tests_require=['pytest'],
