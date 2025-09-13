@@ -1,0 +1,1 @@
+ros2 run decision_making_pkg waypoint_follower_node --ros-args -p waypoints_file:=/home/jeanho/waypoint.csv

@@ -4,13 +4,17 @@ from sensor_msgs.msg import NavSatFix
 from interfaces_pkg.msg import MotionCommand
 import csv
 import math
+import utm
 
 class WaypointFollowerNode(Node):
     def __init__(self):
         super().__init__('waypoint_follower_node')
 
         # Parameters
-        self.declare_parameter('waypoints_file', 'waypoints.csv')
+        self.declare_parameter('waypoints_file', '/home/jeanho/waypoints.csv')
+        self.declare_parameter('utm_zone_number', 52) # Default for South Korea
+        self.declare_parameter('utm_zone_letter', 'S') # Default for South Korea
+
 
         # Variables
         self.waypoints = []
@@ -20,18 +24,23 @@ class WaypointFollowerNode(Node):
         self.load_waypoints()
 
         # Subscribers
-        self.create_subscription(NavSatFix, '/fix', self.gps_callback, 10)
+        self.create_subscription(NavSatFix, '/ublox_gps_node/fix', self.gps_callback, 10)
 
         # Publishers
         self.motion_command_publisher = self.create_publisher(MotionCommand, 'motion_command', 10)
 
     def load_waypoints(self):
         file_path = self.get_parameter('waypoints_file').get_parameter_value().string_value
+        utm_zone_number = self.get_parameter('utm_zone_number').get_parameter_value().integer_value
+        utm_zone_letter = self.get_parameter('utm_zone_letter').get_parameter_value().string_value
         with open(file_path, 'r') as f:
             reader = csv.reader(f)
             next(reader) # Skip header
             for row in reader:
-                self.waypoints.append((float(row[0]), float(row[1])))
+                easting = float(row[0])
+                northing = float(row[1])
+                lat, lon = utm.to_latlon(easting, northing, utm_zone_number, utm_zone_letter)
+                self.waypoints.append((lat, lon))
 
     def gps_callback(self, msg):
         self.current_lat = msg.latitude

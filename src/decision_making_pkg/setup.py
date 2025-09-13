@@ -13,6 +13,8 @@ setup(
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
         (os.path.join('share', package_name, 'lib'), glob('lib/*.py')),
+        (os.path.join('share', package_name, 'waypoints'), glob('waypoints/*.csv')),
+
     ],
     install_requires=['setuptools'],
     zip_safe=True,
