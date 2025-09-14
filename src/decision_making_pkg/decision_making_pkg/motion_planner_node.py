@@ -123,8 +123,8 @@ class MotionPlanningNode(Node):
                 max_steer = 7.0
                 target_steering = np.clip(target_steering, -max_steer, max_steer)
 
-            self.left_speed_command = 50  # 예시 속도 값 (255가 최대 속도)
-            self.right_speed_command = 50  # 예시 속도 값 (255가 최대 속도)
+            self.left_speed_command = 255  # 예시 속도 값 (255가 최대 속도)
+            self.right_speed_command = 255  # 예시 속도 값 (255가 최대 속도)
 
         # Smooth the steering command using a low-pass filter
         self.steering_command = (self.smoothing_factor * target_steering) + \
